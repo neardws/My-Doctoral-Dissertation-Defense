@@ -4,7 +4,9 @@
 
 \ProcessOptionsBeamer
 
-\useoutertheme[footline=authorinstitutetitle,subsection=false]{smoothbars}
+\useoutertheme{smoothtree}
+%\useoutertheme[subsection=true, section=true, subsubsection=true, smoothtree=true]{tree}
+%\useoutertheme[footline=authorinstitutetitle,subsection=false, subsectionslide=true,progressbar=frametitle]{smoothbars}
 \makeatletter % [add curpage/total page at the bottom](http://tex.stackexchange.com/questions/100838/beamer-dresden-theme-miniframes-appeareance-and-frame-number-insertion)
 \newcommand{\frameofframes}{/}
 \newcommand{\setframeofframes}[1]{\renewcommand{\frameofframes}{#1}}
@@ -36,6 +38,9 @@
 \setbeamercolor{footline}{bg=cqublue}
 \setbeamercolor{frametitle}{bg=cqublue,fg=white}
 \setbeamercolor{title}{bg=cqublue}
+\setbeamerfont{title}{size=\LARGE}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{institute}{size=\normalsize}
 \setbeamerfont{frametitle}{size=\large}
 \setbeamertemplate{bibliography item}[text]
 \setbeamertemplate{caption}[numbered]
@@ -63,6 +68,10 @@
 \setbeamercolor{structure}{fg=cqublue}
 \setbeamercolor{subsection in sidebar}{fg=brown}
 \setbeamercolor{subsection in sidebar shaded}{fg=grey}
+%% 设置 section 样式
+%\setbeamercolor{section in toc}{fg=blue}
+%% 设置 subsection 样式
+%\setbeamercolor{subsection in toc}{fg=green}
 \AtBeginSection[]{
 	\begin{frame}
 		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
@@ -73,6 +82,35 @@
 		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
 	\end{frame}
 }
+
+\usepackage{setspace}
+
+%\usefonttheme{serif}
+
+\setmainfont[BoldFont=STHeiti, ItalicFont=STKaiti]{PingFang SC}
+\setsansfont[BoldFont=STHeiti]{STHeiti}
+\setmonofont{Courier New}
+
+\newfontfamily\englishfont{Times New Roman} % 设置英文字体
+
+\usepackage[absolute,overlay]{textpos}
+
+% More styles for bullets
+\usepackage{pifont}
+
+%\hypersetup{
+%  colorlinks=true,
+%  linkcolor=white,
+%  citecolor=cqublue,
+%%  supercitecolor=cqublue,
+%  urlcolor=cqublue,
+%  linkbordercolor=cqublue, % 修改边框颜色
+%%  linkborderstyle={/C[0 0 1] 0.5 setdash}, % 修改边框样式
+%  % 或者使用下面的代码去掉边框
+%  % linkbordercolor=white,
+%  % linkborderstyle={},
+%}
+
 
 \mode
 <all>
