@@ -301,3 +301,5 @@ TSWLatexianTemp*
 #*Notes.bib
 .DS_Store
 *.eddx
+*.ipynb
+*.csv
